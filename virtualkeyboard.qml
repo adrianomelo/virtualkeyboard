@@ -1,6 +1,7 @@
 import QtQuick 1.1
+import com.adrianomelo 1.0
 
-Item {
+ScanGroup {
     width: 360
     height: 360
 
