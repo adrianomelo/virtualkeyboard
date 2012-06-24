@@ -6,7 +6,7 @@ ScanGroup {
     height: 360
 
     Column {
-        anchors.fill: parent
+        anchors.centerIn: parent
         spacing: 10
 
         LettersRow {
