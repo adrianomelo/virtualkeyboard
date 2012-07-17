@@ -5,6 +5,13 @@ ScanGroup {
     width: 360
     height: 360
 
+    Rectangle {
+        anchors.fill: parent
+        visible: parent.selected
+        opacity: 0.5
+        color: "white"
+    }
+
     Column {
         anchors.centerIn: parent
         spacing: 10

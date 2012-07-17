@@ -7,6 +7,13 @@ ScanGroup {
     height: row.height
     width: row.width
 
+    Rectangle {
+        anchors.fill: parent
+        visible: parent.selected
+        opacity: 1
+        color: "pink"
+    }
+
     Row {
         id: row
         spacing: 10
@@ -21,7 +28,7 @@ ScanGroup {
 
                 Rectangle {
                     anchors.fill: parent
-                    color: "red"
+                    color: parent.selected ? "red" : "blue"
 
                     Text {
                         anchors.centerIn: parent
