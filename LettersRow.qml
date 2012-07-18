@@ -6,7 +6,6 @@ ScanGroup {
 
     height: row.height
     width: row.width
-    opacity: selected ? 1.0 : 0.8
 
     Row {
         id: row
@@ -18,5 +17,15 @@ ScanGroup {
                 value: model.modelData
             }
         }
+    }
+
+    Rectangle {
+        anchors.centerIn: parent
+        width: parent.width - border.width * 2
+        height: parent.height - border.width * 2
+        border.width: 2
+        border.color: "black"
+        visible: parent.selected
+        color: "transparent"
     }
 }

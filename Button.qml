@@ -10,7 +10,6 @@ ScanGroup {
     Image {
         anchors.fill: parent
         source: "images/button_bg.png"
-        opacity: parent.selected ? 1 : 0.8
 
         Text {
             anchors.centerIn: parent
@@ -18,5 +17,16 @@ ScanGroup {
             color: "black"
         }
     }
-}
 
+    Rectangle {
+        anchors.centerIn: parent
+        width: parent.width - border.width * 2
+        height: parent.height - border.width * 2
+        visible: parent.selected
+
+        color: "transparent"
+        border.width: 2
+        border.color: "black"
+        opacity: 0.8
+    }
+}

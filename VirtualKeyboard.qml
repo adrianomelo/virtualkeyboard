@@ -1,33 +1,34 @@
 import QtQuick 1.1
 import com.adrianomelo 1.0
 
-ScanGroup {
-    width: 360
-    height: 360
+Rectangle {
+    property int margins: 10
 
-    Rectangle {
-        anchors.fill: parent
-        visible: parent.selected
-        opacity: 0.5
-        color: "white"
-    }
+    color: "#8e8d98"
+    width: column.width + margins * 2
+    height: column.height + margins * 2
 
-    Column {
-        anchors.centerIn: parent
+    ScanGroup {
+        x: margins
+        y: margins
 
-        LettersRow {
-            anchors.horizontalCenter: parent.horizontalCenter
-            letters: "qwertyuiop"
-        }
+        Column {
+            id: column
 
-        LettersRow {
-            anchors.horizontalCenter: parent.horizontalCenter
-            letters: "asdfghjkl"
-        }
+            LettersRow {
+                anchors.horizontalCenter: parent.horizontalCenter
+                letters: "qwertyuiop"
+            }
 
-        LettersRow {
-            anchors.horizontalCenter: parent.horizontalCenter
-            letters: "zxcvbnm"
+            LettersRow {
+                anchors.horizontalCenter: parent.horizontalCenter
+                letters: "asdfghjkl"
+            }
+
+            LettersRow {
+                anchors.horizontalCenter: parent.horizontalCenter
+                letters: "zxcvbnm"
+            }
         }
     }
 }

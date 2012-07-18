@@ -2,7 +2,7 @@ import QtQuick 1.1
 import com.adrianomelo 1.0
 
 Item {
-    width: 500
+    width: 800
     height: 300
 
     function next()
@@ -11,7 +11,7 @@ Item {
     }
 
     VirtualKeyboard {
-        anchors.fill: parent
+        anchors.centerIn: parent
     }
 
     ScanningControl {
