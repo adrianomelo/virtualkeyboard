@@ -6,36 +6,16 @@ ScanGroup {
 
     height: row.height
     width: row.width
-
-    Rectangle {
-        anchors.fill: parent
-        visible: parent.selected
-        opacity: 1
-        color: "pink"
-    }
+    opacity: selected ? 1.0 : 0.8
 
     Row {
         id: row
-        spacing: 10
-        height: 40
+        height: 66
 
         Repeater {
             model: letters.split("")
-
-            ScanGroup {
-                width: 40
-                height: 40
-
-                Rectangle {
-                    anchors.fill: parent
-                    color: parent.selected ? "red" : "blue"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: model.modelData
-                        color: "black"
-                    }
-                }
+            Button {
+                value: model.modelData
             }
         }
     }

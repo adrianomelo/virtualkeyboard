@@ -14,7 +14,6 @@ ScanGroup {
 
     Column {
         anchors.centerIn: parent
-        spacing: 10
 
         LettersRow {
             anchors.horizontalCenter: parent.horizontalCenter
